@@ -12,12 +12,20 @@ class BmrCalculatorClass {
         NONE, LIGHT, MODERATE, HEAVY, VERY_HEAVY
     }
 
+/**
+ * This is a Basal Metabolic Rate Calculator based on Harris Benedict's formula
+ *
+ * @param gender Male or Female
+ * @param weight in kg
+ * @param height in cm
+ * @param age in years
+ * @return the persons Basal Metabolic Rate
+ */
+
     static basalMetabolicRate(Gender gender, Number weight, Number height, Number age) {
         switch (gender) {
-            case MALE:
-                return formula(88.362, (13.397 * weight), (4.799 * height), (5.677 * age))
-            case FEMALE:
-                return formula(447.593, (9.247 * weight), (3.098 * height), (4.330 * age))
+            case MALE: return formula(88.362, (13.397 * weight), (4.799 * height), (5.677 * age))
+            case FEMALE: return formula(447.593, (9.247 * weight), (3.098 * height), (4.330 * age))
         }
     }
 
